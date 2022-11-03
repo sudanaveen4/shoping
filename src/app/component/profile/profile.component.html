@@ -1,0 +1,56 @@
+<DIV class="top"><label>NAME: </label>
+<H2>SUDA NAVEEN</H2>
+<label for="">E-MAIL:</label>
+<H2>sudanaveen4@gmail.com</H2>
+<label>PHONE:</label>
+<H2 >9014905745</H2></DIV>
+
+<h1 style="text-align: center;">my orders</h1>
+<ng-container *ngIf="products.length !=0">
+    <div class="container">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="r" *ngFor="let item of products; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.title}}</td>
+                            <td><img style="width: 120px;" src="{{item.image}}" alt=""></td>
+                            <th style="width: 12%;">{{item.price}}</th>
+                            <td style="width: 12%;">{{item.quantity}}</td>
+                            <td style="width: 12%;">{{item.total}}</td>
+                            
+                        </tr>
+                        <tr class="r">
+                            <td colspan="3"></td>
+                            <td><button (click)="emptycart()" class="btn btn-danger">Cancle order</button></td>
+                            <td><button routerLink="/products" class="btn btn-primary">Shop More</button></td>
+                            <td><strong>Grand Total : ₹{{grandTotal}}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="products.length ==0">
+
+       
+        <div style="text-align: center;" class="center">
+            <h4>NO ORDERS</h4>
+            <h6>Order it now</h6>
+            <button style="background-color: #f87e52;" routerLink="/products" class="btn btn-primary">Order Now</button>
+        </div>
+ 
+</ng-container>

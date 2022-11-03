@@ -1,0 +1,19 @@
+<div class="login-form">
+    <form [formGroup]="LoginForm" (ngSubmit)="register()" >
+      <h1>Login</h1>
+      <div class="content">
+        <div class="input-field">
+          <input type="email" placeholder="Email" formControlName="email" autocomplete="nope">
+        </div>
+        <div class="input-field">
+          <input type="password" placeholder="Password"formControlName="password"  autocomplete="new-password">
+        </div>
+        <a href="#" class="link">Forgot Your Password?</a>
+      </div>
+      <div class="action">
+        <button routerLink="/register" >Register</button>
+        <button type="submit">Sign in</button>
+      </div>
+    </form>
+    </div>
+ 

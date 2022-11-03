@@ -1,0 +1,28 @@
+
+<div class="login-form">
+    <form  [formGroup]="RegisterForm" (ngSubmit)="register()">
+      <h1>Register</h1>
+      <div class="content">
+        <div class="input-field">
+            <input type="text" formControlName="firstname" placeholder="First name" autocomplete="nope" >
+          </div>
+          <div class="input-field">
+            <input type="text" formControlName="lastname"placeholder="Last name" autocomplete="nope" >
+          </div>
+          <div class="input-field">
+            <input type="number" formControlName="Phone"placeholder="Phone number" value="Phone" autocomplete="nope" >
+          </div>
+        <div class="input-field">
+          <input type="email" formControlName="Email"placeholder="Email" autocomplete="nope" >
+        </div>
+        <div class="input-field">
+          <input type="password" formControlName="Password"placeholder="Password" autocomplete="new-password" >
+        </div>
+        
+      </div>
+      <div class="action">
+        <button routerLink="/login" >login</button>
+        <button type="submit">Sign up</button>
+      </div>
+    </form>
+    </div>
